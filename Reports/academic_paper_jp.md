@@ -1,7 +1,8 @@
 # 知能の幾何学的射影：Morphic Inner World による決定論的 AI の実証とスケール不変性の証明
 
-**著者:** Fumio Miyata  
+**著者:** 宮田 章雄 (Fumio Miyata)  
 **日付:** 2026年3月7日  
+**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
 **リポジトリ:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
 
 ## 要旨
@@ -78,8 +79,9 @@ GPT-4 や Claude 3.5 をはじめとする現代の LLM は、驚異的なコー
 ---
 
 ## 6. 結論
-本研究のすべてのソースコード、テストスイート、および再現用スクリプトは、以下のリポジトリにて公開されている：
-[https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+本研究のすべての成果（ソースコード、テストスイート、再現用スクリプト、および本論文）は、以下の恒久的な DOI およびリポジトリにて公開されている：
+**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
+**Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
 
 知能を「論理の幾何学的な一致」として捉える三層モーフィズム・アーキテクチャは、ハルシネーションを物理的に排除し、真に信頼可能な AI システムを構築するための唯一の架け橋である。
 
@@ -87,6 +89,6 @@ GPT-4 や Claude 3.5 をはじめとする現代の LLM は、驚異的なコー
 
 ## 参考文献
 [1] Morphic Inner World Project Team. (2026). Morphic Core 言語仕様 v1.2.  
-[2] Fumio Miyata. (2026). 決定論的知能の幾何学的構築：最終仕様書.  
+[2] Fumio Miyata. (2026). 決定論的知能の幾何学的構築：最終仕様書. DOI: 10.5281/zenodo.18905026.  
 [3] aikenkyu001. (2026). LLM Complexity Benchmark: Quantifying Discipline.  
 [4] Derived Categories and Sheaf Cohomology in AI Logic. (Theoretical Background).

@@ -2,6 +2,7 @@
 
 **Author:** Fumio Miyata  
 **Date:** March 7, 2026  
+**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
 **Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
 
 ## Abstract
@@ -78,8 +79,9 @@ The fact that English and Japanese specifications converge to identical ASTs and
 ---
 
 ## 6. Conclusion
-All experimental assets, including the core VM, synthesis engine, and complete benchmark suite, are available at:
-[https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+All experimental assets, including the core VM, synthesis engine, and complete benchmark suite, are permanently archived and available at:
+**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
+**Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
 
 In an era dominated by stochastic approximation, the Morphic Inner World demonstrates the overwhelming reliability and scalability of **Deterministic AI**. By redefining intelligence as the geometric convergence of logic, we have established a bridge that physically eliminates hallucinations and provides a blueprint for truly dependable AI systems.
 
@@ -87,6 +89,6 @@ In an era dominated by stochastic approximation, the Morphic Inner World demonst
 
 ## References
 [1] Morphic Inner World Project Team. (2026). Morphic Core Language Specification v1.2.  
-[2] Fumio Miyata. (2026). Geometric Construction of Deterministic Intelligence: Final Specification.  
+[2] Fumio Miyata. (2026). Geometric Construction of Deterministic Intelligence: Final Specification. DOI: 10.5281/zenodo.18905026.  
 [3] aikenkyu001. (2026). LLM Complexity Benchmark: Quantifying Discipline.  
 [4] Homotopy Type Theory and Categorical Logic in AI Architectures. (Theoretical Reference).
