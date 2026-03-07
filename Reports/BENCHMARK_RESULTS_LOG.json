@@ -1,0 +1,311 @@
+{
+  "timestamp": "2026-03-07T19:44:09.093651",
+  "mode": "bilingual",
+  "summary": {
+    "total_tasks": 60,
+    "success_en": 60,
+    "success_jp": 60
+  },
+  "details": [
+    {
+      "task": "BitmaskGrouper",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "activity_selection",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "autocomplete_trie",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "binary_tree_maximum_path_sum",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "bitwise_and_range",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "boggle_solver",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "dijkstra_shortest_path",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "dijkstra_v2_state_space",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "fractional_knapsack",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "interval_merger",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "kth_largest_element",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "longest_common_subsequence",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "lowest_common_ancestor_nary",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "lru_cache",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "lru_cache_v2_concurrency",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "matrix_chain_multiplication",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "merge_k_sorted_lists",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "merge_sort_in_place",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "minimum_spanning_tree_prim",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "optimal_bst_cost",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "permutations_with_duplicates",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "procedural_quicksort",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "redundant_connection_ii",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "regex_matcher",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "rotate_image_n_by_n",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "serialize_deserialize_nary_tree",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "sparse_matrix_multiplication",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "spiral_matrix_ii",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "sudoku_solver",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "sudoku_solver_v2_nesting",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n1",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n13",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n2",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n20",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n3",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n5",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_constraints_n8",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_context_v100",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_context_v1000",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_context_v2000",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_context_v4000",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_context_v500",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_context_v8000",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d1",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d10",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d15",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d2",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d3",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d4",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d5",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "synthetic_nesting_d7",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "task_60",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "text_justification",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "trapping_rain_water_ii",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "valid_parentheses_complex",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "word_break",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "word_break_v2_context_4k",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "word_ladder",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "word_ladder_v2_branching",
+      "status_en": "OK",
+      "status_jp": "OK"
+    },
+    {
+      "task": "word_search_ii",
+      "status_en": "OK",
+      "status_jp": "OK"
+    }
+  ]
+}

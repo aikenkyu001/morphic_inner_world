@@ -1,0 +1,10 @@
+import pytest
+from solution import Solution
+
+def test_large_context():
+    sol = Solution()
+    state = {}
+    ops = [("key_" + str(i), i) for i in range(100)]
+    res = sol.solve(state, ops)
+    expected = { "key_" + str(i): i for i in range(100) }
+    assert res == expected

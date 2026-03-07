@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ngLugUIKgCdZfAqlgr7Fcf+wrZE</id>
+  <title>arXiv Query: search_query=&amp;id_list=2409.12186,2107.03374,2106.09685,2201.11903,2309.06275&amp;start=0&amp;max_results=10</title>
+  <updated>2026-03-07T11:59:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2409.12186,2107.03374,2106.09685,2201.11903,2309.06275" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2201.11903v6</id>
+    <title>Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</title>
+    <updated>2023-01-10T23:07:57Z</updated>
+    <link href="https://arxiv.org/abs/2201.11903v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.11903v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the ability of large language models to perform complex reasoning. In particular, we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain of thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting. Experiments on three large language models show that chain of thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks. The empirical gains can be striking. For instance, prompting a 540B-parameter language model with just eight chain of thought exemplars achieves state of the art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned GPT-3 with a verifier.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-28T02:33:07Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jason Wei</name>
+    </author>
+    <author>
+      <name>Xuezhi Wang</name>
+    </author>
+    <author>
+      <name>Dale Schuurmans</name>
+    </author>
+    <author>
+      <name>Maarten Bosma</name>
+    </author>
+    <author>
+      <name>Brian Ichter</name>
+    </author>
+    <author>
+      <name>Fei Xia</name>
+    </author>
+    <author>
+      <name>Ed Chi</name>
+    </author>
+    <author>
+      <name>Quoc Le</name>
+    </author>
+    <author>
+      <name>Denny Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.03374v2</id>
+    <title>Evaluating Large Language Models Trained on Code</title>
+    <updated>2021-07-14T17:16:02Z</updated>
+    <link href="https://arxiv.org/abs/2107.03374v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.03374v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-07T17:41:24Z</published>
+    <arxiv:comment>corrected typos, added references, added authors, added acknowledgements</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mark Chen</name>
+    </author>
+    <author>
+      <name>Jerry Tworek</name>
+    </author>
+    <author>
+      <name>Heewoo Jun</name>
+    </author>
+    <author>
+      <name>Qiming Yuan</name>
+    </author>
+    <author>
+      <name>Henrique Ponde de Oliveira Pinto</name>
+    </author>
+    <author>
+      <name>Jared Kaplan</name>
+    </author>
+    <author>
+      <name>Harri Edwards</name>
+    </author>
+    <author>
+      <name>Yuri Burda</name>
+    </author>
+    <author>
+      <name>Nicholas Joseph</name>
+    </author>
+    <author>
+      <name>Greg Brockman</name>
+    </author>
+    <author>
+      <name>Alex Ray</name>
+    </author>
+    <author>
+      <name>Raul Puri</name>
+    </author>
+    <author>
+      <name>Gretchen Krueger</name>
+    </author>
+    <author>
+      <name>Michael Petrov</name>
+    </author>
+    <author>
+      <name>Heidy Khlaaf</name>
+    </author>
+    <author>
+      <name>Girish Sastry</name>
+    </author>
+    <author>
+      <name>Pamela Mishkin</name>
+    </author>
+    <author>
+      <name>Brooke Chan</name>
+    </author>
+    <author>
+      <name>Scott Gray</name>
+    </author>
+    <author>
+      <name>Nick Ryder</name>
+    </author>
+    <author>
+      <name>Mikhail Pavlov</name>
+    </author>
+    <author>
+      <name>Alethea Power</name>
+    </author>
+    <author>
+      <name>Lukasz Kaiser</name>
+    </author>
+    <author>
+      <name>Mohammad Bavarian</name>
+    </author>
+    <author>
+      <name>Clemens Winter</name>
+    </author>
+    <author>
+      <name>Philippe Tillet</name>
+    </author>
+    <author>
+      <name>Felipe Petroski Such</name>
+    </author>
+    <author>
+      <name>Dave Cummings</name>
+    </author>
+    <author>
+      <name>Matthias Plappert</name>
+    </author>
+    <author>
+      <name>Fotios Chantzis</name>
+    </author>
+    <author>
+      <name>Elizabeth Barnes</name>
+    </author>
+    <author>
+      <name>Ariel Herbert-Voss</name>
+    </author>
+    <author>
+      <name>William Hebgen Guss</name>
+    </author>
+    <author>
+      <name>Alex Nichol</name>
+    </author>
+    <author>
+      <name>Alex Paino</name>
+    </author>
+    <author>
+      <name>Nikolas Tezak</name>
+    </author>
+    <author>
+      <name>Jie Tang</name>
+    </author>
+    <author>
+      <name>Igor Babuschkin</name>
+    </author>
+    <author>
+      <name>Suchir Balaji</name>
+    </author>
+    <author>
+      <name>Shantanu Jain</name>
+    </author>
+    <author>
+      <name>William Saunders</name>
+    </author>
+    <author>
+      <name>Christopher Hesse</name>
+    </author>
+    <author>
+      <name>Andrew N. Carr</name>
+    </author>
+    <author>
+      <name>Jan Leike</name>
+    </author>
+    <author>
+      <name>Josh Achiam</name>
+    </author>
+    <author>
+      <name>Vedant Misra</name>
+    </author>
+    <author>
+      <name>Evan Morikawa</name>
+    </author>
+    <author>
+      <name>Alec Radford</name>
+    </author>
+    <author>
+      <name>Matthew Knight</name>
+    </author>
+    <author>
+      <name>Miles Brundage</name>
+    </author>
+    <author>
+      <name>Mira Murati</name>
+    </author>
+    <author>
+      <name>Katie Mayer</name>
+    </author>
+    <author>
+      <name>Peter Welinder</name>
+    </author>
+    <author>
+      <name>Bob McGrew</name>
+    </author>
+    <author>
+      <name>Dario Amodei</name>
+    </author>
+    <author>
+      <name>Sam McCandlish</name>
+    </author>
+    <author>
+      <name>Ilya Sutskever</name>
+    </author>
+    <author>
+      <name>Wojciech Zaremba</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.12186v3</id>
+    <title>Qwen2.5-Coder Technical Report</title>
+    <updated>2024-11-12T13:24:25Z</updated>
+    <link href="https://arxiv.org/abs/2409.12186v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.12186v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this report, we introduce the Qwen2.5-Coder series, a significant upgrade from its predecessor, CodeQwen1.5. This series includes six models: Qwen2.5-Coder-(0.5B/1.5B/3B/7B/14B/32B). As a code-specific model, Qwen2.5-Coder is built upon the Qwen2.5 architecture and continues pretrained on a vast corpus of over 5.5 trillion tokens. Through meticulous data cleaning, scalable synthetic data generation, and balanced data mixing, Qwen2.5-Coder demonstrates impressive code generation capabilities while retaining general and math skills. These models have been evaluated on a wide range of code-related tasks, achieving state-of-the-art (SOTA) performance across more than 10 benchmarks, including code generation, completion, reasoning, and repair, consistently outperforming larger models of the same model size. We believe that the release of the Qwen2.5-Coder series will advance research in code intelligence and, with its permissive licensing, support wider adoption by developers in real-world applications.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-18T17:57:57Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Binyuan Hui</name>
+    </author>
+    <author>
+      <name>Jian Yang</name>
+    </author>
+    <author>
+      <name>Zeyu Cui</name>
+    </author>
+    <author>
+      <name>Jiaxi Yang</name>
+    </author>
+    <author>
+      <name>Dayiheng Liu</name>
+    </author>
+    <author>
+      <name>Lei Zhang</name>
+    </author>
+    <author>
+      <name>Tianyu Liu</name>
+    </author>
+    <author>
+      <name>Jiajun Zhang</name>
+    </author>
+    <author>
+      <name>Bowen Yu</name>
+    </author>
+    <author>
+      <name>Keming Lu</name>
+    </author>
+    <author>
+      <name>Kai Dang</name>
+    </author>
+    <author>
+      <name>Yang Fan</name>
+    </author>
+    <author>
+      <name>Yichang Zhang</name>
+    </author>
+    <author>
+      <name>An Yang</name>
+    </author>
+    <author>
+      <name>Rui Men</name>
+    </author>
+    <author>
+      <name>Fei Huang</name>
+    </author>
+    <author>
+      <name>Bo Zheng</name>
+    </author>
+    <author>
+      <name>Yibo Miao</name>
+    </author>
+    <author>
+      <name>Shanghaoran Quan</name>
+    </author>
+    <author>
+      <name>Yunlong Feng</name>
+    </author>
+    <author>
+      <name>Xingzhang Ren</name>
+    </author>
+    <author>
+      <name>Xuancheng Ren</name>
+    </author>
+    <author>
+      <name>Jingren Zhou</name>
+    </author>
+    <author>
+      <name>Junyang Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.09685v2</id>
+    <title>LoRA: Low-Rank Adaptation of Large Language Models</title>
+    <updated>2021-10-16T18:40:34Z</updated>
+    <link href="https://arxiv.org/abs/2106.09685v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.09685v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-17T17:37:18Z</published>
+    <arxiv:comment>Draft V2 includes better baselines, experiments on GLUE, and more on adapter latency</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Edward J. Hu</name>
+    </author>
+    <author>
+      <name>Yelong Shen</name>
+    </author>
+    <author>
+      <name>Phillip Wallis</name>
+    </author>
+    <author>
+      <name>Zeyuan Allen-Zhu</name>
+    </author>
+    <author>
+      <name>Yuanzhi Li</name>
+    </author>
+    <author>
+      <name>Shean Wang</name>
+    </author>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Weizhu Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.06275v4</id>
+    <title>Re-Reading Improves Reasoning in Large Language Models</title>
+    <updated>2024-11-19T09:06:33Z</updated>
+    <link href="https://arxiv.org/abs/2309.06275v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.06275v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To enhance the reasoning capabilities of off-the-shelf Large Language Models (LLMs), we introduce a simple, yet general and effective prompting method, Re2, i.e., \textbf{Re}-\textbf{Re}ading the question as input. Unlike most thought-eliciting prompting methods, such as Chain-of-Thought (CoT), which aim to elicit the reasoning process in the output, Re2 shifts the focus to the input by processing questions twice, thereby enhancing the understanding process. Consequently, Re2 demonstrates strong generality and compatibility with most thought-eliciting prompting methods, including CoT. Crucially, Re2 facilitates a "bidirectional" encoding in unidirectional decoder-only LLMs because the first pass could provide global information for the second pass. We begin with a preliminary empirical study as the foundation of Re2, illustrating its potential to enable "bidirectional" attention mechanisms. We then evaluate Re2 on extensive reasoning benchmarks across 14 datasets, spanning 112 experiments, to validate its effectiveness and generality. Our findings indicate that, with the exception of a few scenarios on vanilla ChatGPT, Re2 consistently enhances the reasoning performance of LLMs through a simple re-reading strategy. Further analyses reveal Re2's adaptability, showing how it can be effectively integrated with different LLMs, thought-eliciting prompting, and ensemble strategies. Our code is available at \url{https://github.com/Tebmer/Rereading-LLM-Reasoning/}</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-12T14:36:23Z</published>
+    <arxiv:comment>EMNLP 2024 Main</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Xiaohan Xu</name>
+    </author>
+    <author>
+      <name>Chongyang Tao</name>
+    </author>
+    <author>
+      <name>Tao Shen</name>
+    </author>
+    <author>
+      <name>Can Xu</name>
+    </author>
+    <author>
+      <name>Hongbo Xu</name>
+    </author>
+    <author>
+      <name>Guodong Long</name>
+    </author>
+    <author>
+      <name>Jian-guang Lou</name>
+    </author>
+    <author>
+      <name>Shuai Ma</name>
+    </author>
+  </entry>
+</feed>
