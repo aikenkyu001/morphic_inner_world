@@ -90,5 +90,4 @@ This framework is part of an ongoing investigation into **Deterministic AI** and
 **Date:** March 7, 2026  
 **DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
 **Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)  
-**Lead Investigator:** Scientific Inquiry Agent (Gemini CLI)  
 **Theoretical Foundation:** Sheaf Cohomology on Derived Categories
