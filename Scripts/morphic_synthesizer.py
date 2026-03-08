@@ -95,5 +95,5 @@ class MorphicSynthesizer:
         {output_logic}""")
 
         if not methods_code: return None
-        full_code = f"import sys, os\nproject_root = '{root_dir}'\nif project_root not in sys.path: sys.path.insert(0, project_root)\nfrom VM.ast import Literal, Var, App, Let, Lambda, ListNode, TreeNode\nfrom VM.evaluator import Evaluator, VLiteral\n\nclass Solution:\n" + "\n".join(methods_code)
+        full_code = f"import sys, os\nproject_root = '{root_dir}'\nif project_root not in sys.path: sys.path.insert(0, project_root)\nfrom VM.python.morphic_ast import Literal, Var, App, Let, Lambda, ListNode, TreeNode\nfrom VM.python.evaluator import Evaluator, VLiteral\n\nclass Solution:\n" + "\n".join(methods_code)
         return full_code

@@ -1,5 +1,5 @@
 from solution import Solution
-from VM.ast import TreeNode
+from VM.morphic_ast import TreeNode
 def test_task():
     sol = Solution()
     root = TreeNode(1)

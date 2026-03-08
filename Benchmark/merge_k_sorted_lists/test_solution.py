@@ -1,5 +1,5 @@
 from solution import Solution
-from VM.ast import ListNode
+from VM.morphic_ast import ListNode
 def test_task():
     sol = Solution()
     l1 = ListNode(1); l1.next = ListNode(4)

@@ -207,3 +207,16 @@ marimo/_lsp/
 __marimo__/
 
 References/*.pdf
+
+# --- Morphic Inner World Extensions ---
+
+# Fortran (fpm) build artifacts
+VM/fortran/build/
+VM/fortran/*.mod
+VM/fortran/*.smod
+
+# Generated Implementations (Ignore all generated code except placeholders)
+Implementations/python/*
+!Implementations/python/.gitkeep
+Implementations/fortran/*
+!Implementations/fortran/.gitkeep

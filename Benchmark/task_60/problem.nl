@@ -5,6 +5,4 @@ INTERFACE: solve(self, arg1, arg2)
 LOGIC:
   INPUT: arg1, arg2
   1. ultimate dynamic logic synthesis
-  2. reconstruct list
-  3. count elements
   OUTPUT: return value

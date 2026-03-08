@@ -1,0 +1,8 @@
+name = "morphic_kernel"
+version = "0.1.0"
+[library]
+source-dir = "src"
+[[executable]]
+name = "morphic_cli"
+source-dir = "app"
+main = "main.f90"
