@@ -1,4 +1,4 @@
-# [Geometric NL Specification]
+# [Geometric NL Spec]
 TASK: synthetic_nesting_d2
 INTERFACE: solve(self, arg1)
 

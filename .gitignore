@@ -220,3 +220,7 @@ Implementations/python/*
 !Implementations/python/.gitkeep
 Implementations/fortran/*
 !Implementations/fortran/.gitkeep
+
+.DS_Store
+References/papers/*.pdf
+Reports/BENCHMARK_RESULTS_LOG.json

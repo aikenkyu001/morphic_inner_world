@@ -1,4 +1,4 @@
-# [Geometric NL Specification]
+# [Geometric NL Spec]
 TASK: synthetic_constraints_n8
 INTERFACE: solve(self, arg1)
 

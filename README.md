@@ -1,58 +1,42 @@
 # Morphic Inner World: Quantifying "Deterministic Intelligence" through Geometric NL-AST-EVAL Pipeline
 
-This repository hosts the **Morphic Inner World**, a foundational framework designed to demonstrate and quantify **Deterministic Intelligence**—the ability of an AI system to transcend probabilistic estimation and achieve 100% logical accuracy through structural morphism.
-
-While modern Large Language Models (LLMs) struggle with "hallucinations" and "logical collapse" under complexity, this project proves that by mapping Natural Language (NL) onto a closed logical universe (the "Inner World") via **Geometric NL Projection**, we can achieve absolute reliability and scale invariance.
-
----
-
-## 🚀 Key Results: The "Morphic Proof" (Updated March 8, 2026)
-Our latest evaluation demonstrates the absolute superiority of Deterministic Intelligence:
-
-- **Deterministic Success Rate:** **100.0% (60/60 tasks)**
-- **Bilingual Consistency:** 100.0% Logic Match (EN/JP)
-- **Scale Invariance:** Validated up to v8000 context, d15 recursion, n20 constraints.
-- **Cross-Platform Parity:** Verified 100% deterministic match between **Python 3.12** and **Modern Fortran (gfortran 13.3)**.
-
----
-
-## 🏗 Project Architecture (Multi-Kernel Evolution)
-
-```text
-.
-├── Benchmark/        # 60 tasks with NL specifications and Pytest suites
-├── Log/              # Detailed execution traces and VM evaluation logs
-├── Reports/          # Final scientific reports and success rate analysis
-├── Scripts/          # Synthesis, verification, and benchmark execution tools
-├── Theory/           # Theoretical framework, Semantic Dictionary, and Wisdom Base
-├── VM/               # The Morphic Core (Multi-Language Implementation)
-│   ├── python/       # Reference implementation in Python
-│   └── fortran/      # High-performance implementation in Modern Fortran
-└── Implementations/  # Language-specific generated artifacts (Python/Fortran)
-```
-
----
-
-## 🧪 The Pipeline: NL → AST → EVAL
-To eliminate probabilistic uncertainty, we employ a multi-stage deterministic execution strategy:
-1.  **NL → AST (Outer World & Bridge)**: Ambiguous NL specifications are filtered through a **Semantic Dictionary** and synthesized into a rigorous **Abstract Syntax Tree (AST)**.
-2.  **AST → EVAL (Inner World)**: The Morphic VM (Pure Functional Evaluator) reduces the AST to its **Normal Form**.
-3.  **Cross-Platform Execution**: The same AST can be executed by either the **Python Kernel** or the **Fortran Kernel**, yielding bit-identical results.
-
----
-
-## 📊 Scale Invariance Metrics (The "Complexity Wall")
-Morphic Inner World is tested against extreme complexity gradients:
-- **Contextual Scaling (v8000)**: Maintaining logical integrity over 8,000+ token specifications.
-- **Structural Scaling (d15)**: Perfect processing of 15-level recursive/nested structures.
-- **Constraint Scaling (n20)**: Simultaneous validation of 20+ independent logical constraints.
-
----
-
-## 📜 Research Context
-This framework is part of an ongoing investigation into **Deterministic AI** and **Sheaf-theoretic Intelligence**.
-
 **Author:** Fumio Miyata  
-**Date:** March 8, 2026  
+**Date:** March 9, 2026  
 **DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
 **Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+
+This repository hosts the **Morphic Inner World**, a foundational framework designed to demonstrate and quantify **Deterministic Intelligence** through a Geometric NL-AST-EVAL pipeline.
+
+## 1. Core Breakthrough: 100% Deterministic Reliability
+We have established and verified **100.0% Reliability** across a bilingual benchmark of 60 complex algorithmic tasks. Unlike stochastic models (LLMs) that rely on probabilistic approximation, the Morphic framework ensures that logic is preserved with mathematical precision across different languages and execution kernels.
+
+**[Updated March 9, 2026]**: Revised Academic Paper (v1.1) now available in `Reports/`, including formal algorithms and detailed benchmark specs.
+
+## 2. Key Technical Features
+- **Geometric Projection**: Mapping Natural Language (NL) to irreducible Abstract Syntax Trees (AST) using a structure-preserving morphism.
+- **Scale Invariance**: Proved stability under extreme scaling:
+  - **v8000**: Processing specifications exceeding 8,000 tokens with zero logical decay.
+  - **d15**: Correct execution of 15-level recursive/nested structures.
+  - **n20**: Simultaneous verification of 20+ independent logical constraints.
+- **Bilingual Identity**: Absolute parity between English and Japanese task specifications.
+
+## 3. Quick Start
+To replicate the 100% success rate across all kernels:
+```bash
+# Requires Python 3.12+ and gfortran/fpm
+./Scripts/verify_all.sh
+```
+
+## 4. Repository Map
+- `Benchmark/`: 60 Task directories with bilingual specs (`.nl`) and truth-sets (`test_solution.py`).
+- `VM/`: Execution kernels (Python Evaluator & Modern Fortran Engine).
+- `Theory/`: Formal core language specs and the 1:1 Semantic Dictionary.
+- `Scripts/`: Automation tools for synthesis, alignment, and global verification.
+- `Reports/`: 
+  - `academic_paper_en.md` / `jp.md`: Revised Paper (v1.1).
+  - `BENCHMARK_SPEC.md`: Detailed metadata for 60 tasks.
+  - `FORMAL_METHODOLOGY.md`: Morphic Primitives & Synthesis Algorithms.
+  - `TRACE_EN_JP_PARITY.md`: Trace of language invariance.
+
+---
+**"Correct words form correct shapes. Protocol is the skeleton that supports the boundaries of intelligence."**

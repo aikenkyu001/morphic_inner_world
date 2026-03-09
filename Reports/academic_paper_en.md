@@ -1,94 +1,117 @@
-# Geometric Projection of Intelligence: Establishing Deterministic AI and Scale Invariance via the Morphic Inner World
+# Morphic Inner World: A Deterministic Term-Algebra Cognitive Architecture Framework for Compositional Reasoning
 
 **Author:** Fumio Miyata  
-**Date:** March 7, 2026  
-**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
-**Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+**Date:** March 9, 2026  
+**DOI:** https://doi.org/10.5281/zenodo.18905026  
+**Keywords:** Cognitive Architecture, Symbolic Reasoning, Term Algebra, Compositionality, Deterministic Inference
+
+---
 
 ## Abstract
-Modern Large Language Models (LLMs) rely on stochastic next-token prediction, an inherent architecture that leads to logical decay and "hallucinations" under high-entropy structural constraints. In this paper, we propose the **Morphic Inner World**, a novel architecture that transcends probabilistic estimation by mapping Natural Language (NL) onto a closed logical manifold through **Geometric Projection**. By translating ambiguous linguistic inputs into a deterministic Abstract Syntax Tree (AST) executed within a pure functional Virtual Machine (VM), we physically eliminate the Symbol Grounding Problem. Our empirical evaluation across 60 complex algorithmic domains demonstrates a **100% success rate** and absolute reproducibility in both English and Japanese. Furthermore, we prove that our framework maintains **Scale Invariance** in extreme regimes—such as context volumes of 8,000 tokens (v8000) and recursion depths of 15 (d15)—well beyond the "Collapse Point" of state-of-the-art transformer-based models. This study suggests that the essence of intelligence lies not in probabilistic approximation, but in the geometric convergence of logic.
+Reliable compositional reasoning remains a central challenge in artificial intelligence. While modern large language models demonstrate impressive linguistic capabilities, they often exhibit instability when reasoning over deeply nested or structurally complex tasks. This paper introduces **Morphic Inner World (MIW)**, a deterministic cognitive architecture that models reasoning as a structure-preserving projection from natural language into a symbolic reasoning space defined as a **free term algebra**. We formally define the projection mechanism, which utilizes a deterministic longest-match tokenizer and a fixed dictionary of **44 Morphic Primitives**, ensuring absolute logical consistency without reliance on probabilistic inference. The architecture is evaluated against a benchmark of 60 tasks encompassing algorithmic, spatial, and constraint-based reasoning. Results demonstrate 100.0% accuracy and implementation invariance across Python and Modern Fortran kernels.
 
 ---
 
 ## 1. Introduction
-
-### 1.1 The Stochastic Ceiling
-The rapid evolution of auto-regressive transformers has revolutionized automated reasoning. However, a fundamental ceiling persists: as structural complexity increases, the reliability of these models undergoes a non-linear collapse. This phenomenon stems from the lack of rigid grounding; symbols in a stochastic space are transient distributions rather than immutable logical entities. Consequently, deep nesting and multi-layered constraints often cause the global logical coherence of LLMs to disintegrate into "hallucinatory" noise.
-
-### 1.2 Contributions
-We introduce a paradigm shift from "Probabilistic Inference" to "Deterministic Morphism." Our primary contributions are:
-1.  **The Triple-Layer Morphic Architecture**: A rigid separation between the Outer World (NL), the Bridge (AST Synthesis), and the Inner World (Deterministic VM), effectively immunizing the system against hallucinations.
-2.  **Arity-based Logic Synthesis**: A novel algorithm that constructs logical trees based on mathematical adjuncts (arity) rather than statistical likelihood.
-3.  **Physical Proof of Scale Invariance**: Demonstration of 100% accuracy in extreme complexity gradients (v8000 context, d15 depth, n20 constraints), far surpassing the structural limits of attention-based architectures.
-4.  **Language-Invariant Logic**: Empirical evidence that bilingual inputs (EN/JP) converge to the exact same logical manifold, achieving 100.0% success across all 60 tasks.
+Modern neural language models struggle with **systematic compositional reasoning**, particularly in tasks requiring precise structural manipulation (Lake & Baroni, 2018; Liu et al., 2023). These limitations stem from the probabilistic nature of transformer-based architectures, which lack a rigid structural anchor. Historically, cognitive architectures like **ACT-R** and **SOAR** provided structured frameworks but often relied on heuristic search. This paper proposes MIW, where reasoning is a **deterministic algebraic reduction** within a term-algebraic manifold.
 
 ---
 
-## 2. Theoretical Framework: Geometric Projection
+## 2. Architecture and Formal Model
 
-### 2.1 Defining Deterministic Intelligence
-We define intelligence as a **morphism**—a structure-preserving mapping from the noise of the human world (unstructured NL) to the truth of the mathematical world (formal logic). Unlike LLMs that maximize $\text{argmax} P(w_t | w_{<t})$, our system operates as a functorial adjunction:
-\[ \mathcal{M} : \text{NL}_{\text{unstructured}} \xrightarrow{\pi} \text{AST}_{\text{formal}} \xrightarrow{\text{Norm}} \text{Result}_{\text{deterministic}} \]
+### 2.1 The Global Flow
+The MIW architecture processes input through a unidirectional three-stage pipeline (Fig. 1). From an information-theoretic perspective, this represents a transition from high-entropy linguistic input to a low-entropy, structured logical normal form.
 
-### 2.2 Resolution of the Symbol Grounding Problem
-In the Morphic framework, "meaning" is not a distribution in a latent vector space. Instead, it is defined as a 1:1 mapping to a **Primitive**—an atomic computational unit within the VM. By enforcing this physical constraint, the problem of symbol grounding is resolved by definition rather than by estimation.
+![Fig. 1: Overview of the MIW architecture. Natural language is projected via a deterministic tokenizer into primitive operators (Sec 2.2), composed into symbolic structures (Sec 3.1), and reduced to normal form (Sec 3.2). MSP Check (Sec 2.2) and the 44 Primitives (Sec 2.3) ensure structural integrity.](images/fig1_global_flow.pdf)
 
----
+### 2.2 Input Projection and MSP Check
+The projection phase $h: \mathcal{L} \to \Sigma^*$ is strictly deterministic. It employs:
+1.  **Longest-Match Tokenization**: Phrases are matched against a **Semantic Dictionary** using a greedy longest-prefix strategy. Within the current scope, linguistic ambiguity is avoided through the use of a **Controlled Vocabulary**, ensuring a one-to-one mapping between task intents and primitives.
+2.  **MSP (Morphic Structural Pointers)**: Numbered markers (e.g., "1.", "2.") serve as structural anchors to identify logical blocks, allowing the system to ignore surrounding high-entropy noise.
 
-## 3. System Architecture: The Triple-Layer Morphism
-
-### 3.1 Outer World: Geometric NL Specification
-Linguistic inputs are decomposed using a **Longest-Match Tokenizer**. This ensures that complex phrases (e.g., "sort by end time") are prioritized over simpler, ambiguous tokens, extracting the semantic "skeleton" of the requirement.
-
-### 3.2 The Bridge: Deterministic AST Synthesis
-Extracted symbols are stacked and folded into an AST based on their predefined **Arity**. This process is entirely deterministic; the shape of the logic is dictated by the mathematical signature of the primitives, ensuring that no probabilistic "drift" occurs during synthesis.
-
-### 3.3 Inner World: The Morphic VM (The Evaluator)
-The AST is executed within a pure functional VM based on lambda calculus. Every expression is reduced to its **Normal Form**, guaranteeing that for any given input, the output is unique, stable, and mathematically necessary.
+### 2.3 Morphic Primitives (Σ)
+The dictionary consists of **44 irreducible primitives** selected based on fundamental functional programming operations and core cognitive tasks (see Appendix C). This set forms the basis of the free term algebra $M = \mathcal{T}(\Sigma, V)$.
 
 ---
 
-## 4. Experimental Evaluation
+## 3. Structural Synthesis and Evaluation Semantics
 
-### 4.1 Complexity Metrics and Stress Testing
-We evaluated the framework against three primary axes of structural load:
-- **Contextual Volume (v8000)**: Extracting precise logic from specifications exceeding 8,000 tokens (addressing the "Lost in the Middle" problem).
-- **Structural Depth (d15)**: Executing logic with recursive nesting 15 layers deep.
-- **Constraint Density (n20)**: Simultaneous validation of 20 independent non-linear constraints.
-
-### 4.2 Results
-The framework achieved a perfect score across 60 diverse algorithmic tasks.
-
-| Metric | LLM (Est. Average) | Morphic Inner World |
-| :--- | :---: | :---: |
-| **Bilingual Success Rate** | 40.0% - 60.0% | **100.0% (60/60)** |
-| **Contextual Resilience (v8000)** | < 10% | **100.0%** |
-| **Recursion Depth Stability (d15)** | < 5% | **100.0%** |
-| **Reproducibility** | Low (Stochastic) | **Absolute (Deterministic)** |
+Synthesis $g: \Sigma^* \to \mathcal{M}$ constructs symbolic trees satisfying mandatory arity constraints $\alpha(P)$. Evaluation is performed via deterministic rewrite rules $R_P$, ensuring termination and confluence (see Appendix A).
 
 ---
 
-## 5. Discussion
-
-### 5.1 Transcendence of the Collapse Point
-Traditional LLMs suffer from a **Collapse Point**—a threshold where local optimization errors accumulate and disintegrate the global logic. Because the Morphic Inner World treats logic as a unified geometric structure (the AST), it possesses no such threshold. The framework remains stable up to the physical memory limits of the hardware, effectively demonstrating infinite logical scalability.
-
-### 5.2 The Invariance of Logic across Languages
-The fact that English and Japanese specifications converge to identical ASTs and results provides empirical proof that **Logic is a Language-Invariant Invariant**. Intelligence exists as a fundamental logical truth beneath the superficial layers of linguistic media.
+## 4. Examples of Compositional Reasoning
+MIW handles diverse reasoning categories beyond simple sorting:
+- **Algorithmic**: `FILTER(EVEN, SORT(numbers))`.
+- **Spatial Reasoning**: `DIJKSTRA(graph, start, end)`.
+- **Constraint Satisfaction**: `SOLVE_SUDOKU(grid)`.
+- **Optimization**: `TREE_MAX_PATH(root)`.
 
 ---
 
-## 6. Conclusion
-All experimental assets, including the core VM, synthesis engine, and complete benchmark suite, are permanently archived and available at:
-**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
-**Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+## 5. Experimental Evaluation
+MIW maintained a 100.0% success rate across 60 compositional tasks up to $v=8000$ and $d=15$. Results achieved bit-identical parity between Python and Modern Fortran kernels.
 
-In an era dominated by stochastic approximation, the Morphic Inner World demonstrates the overwhelming reliability and scalability of **Deterministic AI**. By redefining intelligence as the geometric convergence of logic, we have established a bridge that physically eliminates hallucinations and provides a blueprint for truly dependable AI systems.
+---
+
+## 6. Discussion: Relation to Neuro-symbolic AI
+Unlike neuro-symbolic systems such as DeepProbLog, MIW operates as a pure algebraic reduction engine. By replacing stochastic search with deterministic projection, MIW offers zero inference variance, linear computational cost, and direct interpretability.
+
+---
+
+## 7. Conclusion
+MIW demonstrates that compositional reasoning can be implemented as a deterministic structure-preserving mapping. Future work will explore hybridization with probabilistic models to bridge structural and perceptual grounding.
+
+---
+
+## Appendix A: Formal Reduction Semantics
+Evaluation is defined as a reduction to **Normal Form (NF)**. The evaluation function $Eval: \mathcal{T}(\Sigma, \mathcal{V}) \to NF$ is defined by:
+1. $Eval(c) = c$ for atomic literals.
+2. $Eval(P(t_1, ..., t_n)) = R_P(Eval(t_1), ..., Eval(t_n))$ for applications.
+Termination and confluence are ensured by finite arity constraints and orthogonality of rewrite rules.
+
+## Appendix B: Benchmark Tasks
+Full task list is available via **Zenodo (DOI: 10.5281/zenodo.18905026)**.
+
+## Appendix C: Full List of Morphic Primitives (Σ)
+| Primitive | Arity | Primitive | Arity |
+| :--- | :---: | :--- | :---: |
+| autocomplete_trie | 2 | matrix_chain | 1 |
+| bitmask_group | 1 | merge_intervals | 1 |
+| bitwise_range_and | 2 | merge_k_lists | 1 |
+| boggle_solve | 2 | mergesort | 1 |
+| check_constraints | 1 | mst_prim | 2 |
+| composite_task_60 | 2 | optimal_bst | 1 |
+| deserialize_tree | 1 | permute_dup | 1 |
+| dijkstra | 3 | process_context | 2 |
+| filter_overlapping | 1 | quicksort | 1 |
+| flatten_nesting | 1 | rain_3d | 1 |
+| fractional_knapsack | 2 | reconstruct_list | 1 |
+| identity | 1 | redundant_conn | 1 |
+| is_valid_parentheses | 1 | regex_match | 2 |
+| kth_largest | 2 | rotate_matrix | 1 |
+| ladder_all | 3 | serialize_tree | 1 |
+| lca_nary | 3 | solve_sudoku | 1 |
+| lcs | 2 | sort_by_end | 1 |
+| length | 1 | sparse_mul | 2 |
+| lru_cache_concurrent | 2 | spiral_gen | 1 |
+| lru_cache_op | 2 | text_justify | 2 |
+| tree_max_path | 1 | word_break | 2 |
+| word_ladder_bfs | 3 | word_search_2 | 2 |
 
 ---
 
 ## References
-[1] Morphic Inner World Project Team. (2026). Morphic Core Language Specification v1.2.  
-[2] Fumio Miyata. (2026). Geometric Construction of Deterministic Intelligence: Final Specification. DOI: 10.5281/zenodo.18905026.  
-[3] aikenkyu001. (2026). LLM Complexity Benchmark: Quantifying Discipline.  
-[4] Homotopy Type Theory and Categorical Logic in AI Architectures. (Theoretical Reference).
+
+- Anderson, J. R., et al. (2004). An integrated theory of the mind. *Psychological Review*, 111, 1036–1060.
+- Bender, E. M., & Koller, A. (2020). Climbing towards NLU. *Proceedings of the ACL*.
+- Church, A. (1932). A set of postulates for the foundation of logic. *Annals of Mathematics*, 33, 346–366.
+- Harnad, S. (1990). The symbol grounding problem. *Physica D*, 42, 335–346.
+- Indiveri, G., & Liu, S.-C. (2021). Introducing 'Neuromorphic Computing and Engineering'. *Neuromorphic Computing and Engineering*, 1(1), 010001.
+- Kotseruba, I., & Tsotsos, J. K. (2020). 40 years of cognitive architectures. *AI Review*, 53(1), 17–94.
+- Lake, B. M., & Baroni, M. (2018). Generalization without systematicity. *Proceedings of ICML*.
+- Landin, P. J. (1964). The mechanical evaluation of expressions. *The Computer Journal*, 6(4), 308–320.
+- Liu, N. F., et al. (2023). Lost in the Middle. *TACL*.
+- Sandamirskaya, Y. (2014). Dynamic neural fields as a step toward cognitive neuromorphic architectures. *Frontiers in Neuroscience*, 7, 276.
+- Tononi, G. (2004). An information integration theory of consciousness. *BMC Neuroscience*, 5, 42.
+- Wadler, P. (2015). Propositions as Types. *Communications of the ACM*, 58(12), 75–84.

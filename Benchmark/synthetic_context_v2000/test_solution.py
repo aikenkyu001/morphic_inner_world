@@ -1,6 +1,5 @@
 import pytest
 from solution import Solution
-
 def test_large_context():
     sol = Solution()
     state = {}

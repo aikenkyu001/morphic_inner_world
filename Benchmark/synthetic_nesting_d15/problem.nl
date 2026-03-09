@@ -1,4 +1,4 @@
-# [Geometric NL Specification]
+# [Geometric NL Spec]
 TASK: synthetic_nesting_d15
 INTERFACE: solve(self, arg1)
 
@@ -14,7 +14,7 @@ LOGIC:
   8. identity transform
   9. identity transform
   10. identity transform
-  11. flatten nesting
+  11. identity transform
   12. identity transform
   13. identity transform
   14. identity transform

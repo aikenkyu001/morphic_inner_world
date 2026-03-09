@@ -1,4 +1,4 @@
-# [Geometric NL Specification]
+# [Geometric NL Spec]
 TASK: synthetic_context_v100
 INTERFACE: solve(self, arg1, arg2)
 

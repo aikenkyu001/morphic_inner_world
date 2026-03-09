@@ -1,0 +1,20 @@
+graph TD
+    subgraph "Input Sequence"
+        Seq["Primitive Sequence<br/>P1, P2, ..., Pn"]
+    end
+
+    subgraph "Synthesis Engine"
+        Fold["Recursive Folding<br/>AST = Fold(P, Args)"]
+        Check["Arity Check<br/>α(P) == |Args|"]
+    end
+
+    subgraph "Output Structure"
+        AST["Abstract Syntax Tree<br/>(Irreducible Graph)"]
+    end
+
+    Seq --> Fold
+    Fold --> Check
+    Check -- Valid --> Fold
+    Check -- Complete --> AST
+
+    style AST fill:#ccf,stroke:#333,stroke-width:2px

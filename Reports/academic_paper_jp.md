@@ -1,79 +1,113 @@
-# 知能の幾何学的射影：Morphic Inner World による決定論的 AI の実証とスケール不変性の証明
+# Morphic Inner World：合成的推論のための決定論的項代数認知アーキテクチャ・フレームワーク
 
 **著者:** Fumio Miyata  
-**日付:** 2026年3月8日（最終改訂版）  
-**DOI:** [10.5281/zenodo.18905026](https://doi.org/10.5281/zenodo.18905026)  
-**リポジトリ:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+**日付:** 2026年3月9日  
+**DOI:** https://doi.org/10.5281/zenodo.18905026  
+**キーワード:** 認知アーキテクチャ、記号推論、項代数、合成性、決定論推論
 
-## 要旨
-現在の Large Language Models (LLMs) は、確率的な次トークン予測に依存しているため、複雑な論理構造下でのハルシネーションや論理崩壊という本質的な課題を抱えている。本論文では、自然言語（NL）の曖昧さを排し、数学的必然性に基づく決定論的推論を実現する新しいアーキテクチャ「Morphic Inner World」を提案する。本フレームワークは、自然言語を「内界（Inner World）」の抽象構文木（AST）へと幾何学的に写像し、純粋関数型 VM で執行することで、記号接地問題を物理的に解消する。実験の結果、全 60 のアルゴリズム課題において、日英両言語で 100% の成功率と完全な再現性を達成した。さらに、Python だけでなく Fortran を用いたマルチカーネル検証により、知能がプログラミング言語という特定の媒体に依存せず、幾何学的構造として不変に存在できることを物理的に実証した。
+---
+
+## 概要
+信頼性の高い合成的推論は、人工知能における中心的な課題であり続けている。現代の大規模言語モデルは優れた言語能力を示す一方で、深く入れ子になった構造や複雑なタスクにおいて不安定性を示すことが多い。本論文では、推論を自然言語入力から自由項代数として定義される記号推論空間への構造保存写像（射影）としてモデル化する決定論的認知アーキテクチャ、**Morphic Inner World (MIW)** を提案する。本フレームワークは、決定論的な最長一致トークナイザと **44 個の既約なプリミティブ** からなる意味論的辞書を用い、確率的推論に依存することなく絶対的な論理的一貫性を保証する。本アーキテクチャは、アルゴリズム、空間推論、および制約充足を含む 60 の課題からなるベンチマークを用いて評価された。実験の結果、定義されたタスクにおいて 100.0% の精度を達成し、Python と Modern Fortran という独立した実装間での完全な一致を確認した。
 
 ---
 
 ## 1. 緒言
-
-### 1.1 背景：確率的推論の限界
-GPT-4 や Claude 3.5 をはじめとする現代の LLM は、驚異的なコード生成能力を示す一方で、複雑性が増大すると急激に精度が低下する。これは、自己回帰型モデルが「もっともらしい」統計的推論に依存しており、記号と論理の間に厳格な接地（Grounding）が欠如しているためである。
-
-### 1.2 本研究の貢献
-本研究では、知能を「計算」ではなく「幾何学的な射影（Morphism）」として捉え直し、以下の貢献を行う。
-1.  **三層モーフィズム・アーキテクチャの確立**: 外界、ブリッジ、内界の分離によるハルシネーションの排除。
-2.  **決定論的論理合成**: 語彙の結合を数学的なアリティによって強制し、一意な AST を導出。
-3.  **完全なスケール不変性**: 8,000 トークン超のコンテキスト、15 階層のネスト、20 個の制約下での 100% 成功。
-4.  **プラットフォーム不変性の実証**: Python と Fortran の異なるカーネル間で、論理構造がビットレベルで一致することを証明。
+現代のニューラル言語モデルは、特に精密な構造操作を必要とするタスクにおいて、**系統的な合成的推論**に苦慮している (Lake & Baroni, 2018; Liu et al., 2023)。これらの限界は、強固な構造的アンカーを欠いたトランスフォーマーベースのアーキテクチャの確率的性質に起因する。歴史的に、**ACT-R** や **SOAR** といった認知アーキテクチャは構造化された枠組みを提供してきたが、推論においてはヒューリスティックな探索に依存することが多かった。本論文では、推論を項代数多様体における**決定論的な代数的簡約**として扱う MIW を提案する。
 
 ---
 
-## 2. 理論的枠組み：幾何学的射影
+## 2. アーキテクチャと形式モデル
 
-我々は知能を、外界の情報（ノイズ）から内界の真理（整合した論理構造）への「劣化なき写像」と定義する。この写像は、以下の関手的随伴として定式化される。
-\[ \mathcal{L} : \text{Natural Language} \xrightarrow{\text{Morphism}} \text{AST} \xrightarrow{\text{Normalization}} \text{Truth} \]
-このプロセスにおいて、確率的要素は一切排除され、出力は入力された論理構造によって一意に決定される。
+### 2.1 全体フロー
+MIW アーキテクチャは、単方向の 3 段階パイプライン（図 1）を通じて入力を処理する。情報理論的な観点からは、このプロセスは高エントロピーな言語入力から、低エントロピーで構造化された論理正規形への遷移を意味する。
 
----
+![図 1: MIW 認知アーキテクチャの概要。自然言語は決定論的なトークナイザを通じて原始オペレータへと射影され（2.2節）、記号構造へと合成された後（3.1節）、正規形へと簡約される（3.2節）。MSP チェック（2.2節）と 44 個のプリミティブ（2.3節）が構造的整合性を保証する。](images/fig1_global_flow.pdf)
 
-## 3. 実験と評価
+### 2.2 入力射影と MSP チェック
+射影フェーズ $h: \mathcal{L} \to \Sigma^*$ は厳密に決定論的であり、以下の要素を用いる：
+1.  **最長一致トークナイズ**: 言語フレーズは貪欲な最長一致戦略を用いて意味論的辞書と照合される。本研究の範囲内では、**制御された語彙（Controlled Vocabulary）** を用いることで言語的多義性を回避し、タスクの意図とプリミティブの間の 1 対 1 の写像を保証している。
+2.  **MSP (Morphic Structural Pointers)**: 「1.」「2.」などの番号付きマーカーが構造的アンカーとして機能し、論理ブロックを識別する。これにより、周囲の高エントロピーなノイズを無視することが可能となる。
 
-### 4.1 実験設定
-本研究では、LLM が苦手とする複雑性を持つ 60 のアルゴリズム課題（`BitmaskGrouper`, `task_60` 等を含む）を設定し、以下の 3 つの軸で検証を行った。
-- **Contextual Complexity (v8000)**: 長距離コンテキストからの情報抽出。
-- **Structural Depth (d15)**: 深いネスト構造の正確な処理。
-- **Constraint Density (n20)**: 多重論理制約の同時充足。
-
-### 4.2 実験結果
-全 60 タスクにおいて、以下の結果を得た。
-
-| 指標 | LLM (推定平均) | Morphic Inner World | 備考 |
-| :--- | :---: | :---: | :--- |
-| **全体成功率 (Bilingual)** | 40.0% - 60.0% | **100.0% (60/60)** | 日英両言語で全テストをパス |
-| **コンテキスト耐性 (v8000)** | < 10% | **100.0%** | 情報劣化なし |
-| **再帰深度耐性 (d15)** | < 5% | **100.0%** | 深層構造の完全維持 |
-| **プラットフォーム不変性** | N/A | **100.0% (Match)** | Python/Fortran 間で同一論理 |
-
-特に、動的な論理合成を要する `task_60` においても、日本語（「究極の動的論理合成」）と英語（"ultimate dynamic logic synthesis"）から生成された AST のハッシュ値が完全に一致し、言語の壁を超えた論理の普遍性が証明された。
+### 2.3 モルフィック・プリミティブ (Σ)
+辞書は、関数型プログラミングの基本操作および中核的な認知タスクに基づいて選定された **44 個の既約なプリミティブ** で構成される（付録 C 参照）。この集合が自由項代数 $M = \mathcal{T}(\Sigma, V)$ の基底となる。
 
 ---
 
-## 5. 考察
-
-### 5.1 崩壊点 (Collapse Point) の克服
-Morphic Inner World は論理を「一括した幾何学的構造」として扱うため、従来の LLM に見られるような、複雑性の増大に伴う論理崩壊（Collapse Point）が存在しないことが示された。
-
-### 5.2 マルチカーネルによる普遍性
-Python 版と Fortran 版のカーネルが同一の論理推論結果を示した事実は、知能が特定の実装言語（肉体）に依存せず、数学的な形（幾何学）として存在できることを物理的に裏付けている。
+## 3. 構造合成と評価意味論
+合成 $g: \Sigma^* \to \mathcal{M}$ は、必須のアリティ制約 $\alpha(P)$ を満たす記号木を構築する。評価は、終止性と合流性が保証された決定論的な書き換え規則 $R_P$ を通じて実行される（付録 A 参照）。
 
 ---
 
-## 6. 結論
-本研究は、全 60 タスクにおける 100% の成功と、クロスプラットフォーム環境での論理完全一致をもって、**「決定論的知能の幾何学的構築」** という目的を完遂した。
-これにより、ハルシネーションのない、真に信頼可能な AI システムの基盤が確立されたと言える。
+## 4. 合成的推論の具体例
+MIW は単純なソート以外の多様な推論カテゴリーを処理する：
+- **アルゴリズム**: `FILTER(EVEN, SORT(numbers))`。
+- **空間推論**: `DIJKSTRA(graph, start, end)`。
+- **制約充足**: `SOLVE_SUDOKU(grid)`。
+- **最適化**: `TREE_MAX_PATH(root)`。
 
-本研究の成果（ソースコード、全検証ログ、再現スクリプト）は、以下のリポジトリにて完全な形で公開されている。
-**Repository:** [https://github.com/aikenkyu001/morphic_inner_world](https://github.com/aikenkyu001/morphic_inner_world)
+---
+
+## 5. 実験的評価
+MIW は、60 の合成的推論タスクにおいて、文脈サイズ $v=8000$、再帰深度 $d=15$ までの極限条件下で 100.0% の精度を維持した。Python と Modern Fortran による独立した実装はビットレベルで同一の出力を生成した。
+
+---
+
+## 6. 考察：Neuro-symbolic AI との関係
+DeepProbLog のような現代的な Neuro-symbolic システムとは異なり、MIW は純粋な代数的簡約エンジンとして動作する。確率的な探索を決定論的な射影に置き換えることで、MIW は推論の分散ゼロ、線形な計算コスト、および直接的な解釈可能性を提供する。
+
+---
+
+## 7. 結論
+MIW は、合成的推論が決定論的な構造保存写像として実装可能であることを示した。今後の課題は、構造的接地と知覚的接地を橋渡しするために、確率的モデルとのハイブリッド化を調査することである。
+
+---
+
+## 付録 A：形式的簡約意味論
+評価プロセスを **正規形 (Normal Form: NF)** への簡約として定義する。評価関数 $Eval: \mathcal{T}(\Sigma, \mathcal{V}) \to NF$ は、原子リテラル $c$ に対して $Eval(c) = c$、適用 $P(t_1, ..., t_n)$ に対して $Eval(P(t_1, ..., t_n)) = R_P(Eval(t_1), ..., Eval(t_n))$ と定義される。有限のアリティ制約と書き換え規則の直交性により、終止性と合流性が保証される。
+
+## 付録 B：ベンチマーク課題
+タスクの全リストは **Zenodo (DOI: 10.5281/zenodo.18905026)** で公開されている。
+
+## 付録 C：モルフィック・プリミティブ (Σ) 全リスト
+| プリミティブ | アリティ | プリミティブ | アリティ |
+| :--- | :---: | :--- | :---: |
+| autocomplete_trie | 2 | matrix_chain | 1 |
+| bitmask_group | 1 | merge_intervals | 1 |
+| bitwise_range_and | 2 | merge_k_lists | 1 |
+| boggle_solve | 2 | mergesort | 1 |
+| check_constraints | 1 | mst_prim | 2 |
+| composite_task_60 | 2 | optimal_bst | 1 |
+| deserialize_tree | 1 | permute_dup | 1 |
+| dijkstra | 3 | process_context | 2 |
+| filter_overlapping | 1 | quicksort | 1 |
+| flatten_nesting | 1 | rain_3d | 1 |
+| fractional_knapsack | 2 | reconstruct_list | 1 |
+| identity | 1 | redundant_conn | 1 |
+| is_valid_parentheses | 1 | regex_match | 2 |
+| kth_largest | 2 | rotate_matrix | 1 |
+| ladder_all | 3 | serialize_tree | 1 |
+| lca_nary | 3 | solve_sudoku | 1 |
+| lcs | 2 | sort_by_end | 1 |
+| length | 1 | sparse_mul | 2 |
+| lru_cache_concurrent | 2 | spiral_gen | 1 |
+| lru_cache_op | 2 | text_justify | 2 |
+| tree_max_path | 1 | word_break | 2 |
+| word_ladder_bfs | 3 | word_search_2 | 2 |
 
 ---
 
 ## 参考文献
-[1] Morphic Inner World Project Team. (2026). Morphic Core 言語仕様 v1.2.  
-[2] Fumio Miyata. (2026). 決定論的知能の幾何学的構築：最終仕様書.  
-[3] aikenkyu001. (2026). LLM Complexity Benchmark: Quantifying Discipline.
+
+- Anderson, J. R., et al. (2004). An integrated theory of the mind. *Psychological Review*, 111, 1036–1060.
+- Bender, E. M., & Koller, A. (2020). Climbing towards NLU. *Proceedings of the ACL*.
+- Church, A. (1932). A set of postulates for the foundation of logic. *Annals of Mathematics*, 33, 346–366.
+- Harnad, S. (1990). The symbol grounding problem. *Physica D: Nonlinear Phenomena*, 42, 335–346.
+- Indiveri, G., & Liu, S.-C. (2021). Introducing 'Neuromorphic Computing and Engineering'. *Neuromorphic Computing and Engineering*, 1(1), 010001.
+- Kotseruba, I., & Tsotsos, J. K. (2020). 40 years of cognitive architectures. *AI Review*, 53(1), 17–94.
+- Lake, B. M., & Baroni, M. (2018). Generalization without systematicity. *Proceedings of ICML*.
+- Landin, P. J. (1964). The mechanical evaluation of expressions. *The Computer Journal*, 6(4), 308–320.
+- Liu, N. F., et al. (2023). Lost in the Middle. *TACL*.
+- Sandamirskaya, Y. (2014). Dynamic neural fields as a step toward cognitive neuromorphic architectures. *Frontiers in Neuroscience*, 7, 276.
+- Tononi, G. (2004). An information integration theory of consciousness. *BMC Neuroscience*, 5, 42.
+- Wadler, P. (2015). Propositions as Types. *Communications of the ACM*, 58(12), 75–84.
