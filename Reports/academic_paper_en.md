@@ -8,7 +8,7 @@
 ---
 
 ## Abstract
-Reliable compositional reasoning remains a central challenge in artificial intelligence, particularly in settings requiring deep structural manipulation. While modern large language models demonstrate impressive linguistic capabilities, they often exhibit instability when reasoning over nested or structurally complex tasks. This paper introduces **Morphic Inner World (MIW)**, a cognitive architecture designed to explore the potential for **Language- and Platform-Invariant Deterministic Intelligence**. Specifically, MIW models reasoning as a structure-preserving **geometric projection** from natural language into a symbolic manifold defined by a **free term algebra**. By employing a strategic longest-match tokenizer, a fixed dictionary of **44 Morphic Primitives**, and a decoupled **Wisdom Base**, MIW maintains high logical consistency across multiple languages and execution kernels. Evaluation across 60 tasks demonstrates that logical substance remains invariant across linguistic and computational substrates within the evaluated scope, achieving 100.0% accuracy and bit-identical parity.
+Reliable compositional reasoning remains a central challenge in artificial intelligence, particularly in settings requiring deep structural manipulation. While modern large language models demonstrate impressive linguistic capabilities, they often exhibit instability when reasoning over nested or structurally complex tasks. This paper introduces **Morphic Inner World (MIW)**, a cognitive architecture designed to explore the potential for **Language- and Platform-Invariant Deterministic Intelligence**. Specifically, MIW models reasoning as a structure-preserving **geometric projection** from natural language into a symbolic manifold defined by a **free term algebra**. By employing a strategic longest-match tokenizer, a fixed dictionary of **44 Morphic Primitives**, and a decoupled **Wisdom Base**, MIW maintains high logical consistency across multiple languages and execution kernels. Evaluation across 60 tasks within the defined benchmark scope demonstrates deterministic reasoning with 100.0% accuracy and bit-identical parity across execution kernels, demonstrating that logical substance can remain invariant across linguistic and computational substrates.
 
 ---
 
@@ -31,7 +31,9 @@ The projection phase $h: \mathcal{L} \to \Sigma^*$ is designed to be strictly de
 2.  **MSP (Morphic Structural Pointers)**: Numbered markers (e.g., "1.", "2.") serve as structural anchors. The synthesizer filters out text outside these anchors, treating it as background noise. This protocol enables the system to extract precise logic even from documents exceeding 8,000 tokens, addressing the "lost in the middle" phenomenon (Liu et al., 2023) and ensuring that the **linguistic structure** is correctly identified for deliberate reasoning (Baroni, 2022; Boggs, 2025).
 
 ### 2.3 Morphic Primitives and Wisdom Base
-The dictionary consists of **44 irreducible primitives** ($\Sigma$). A key architectural feature is the **Wisdom Base (WB)**, a substrate-independent registry that maps abstract primitive IDs to platform-specific implementations (Fig. 2). This registry functions to allow the same universal logical structure (AST) to be instantiated across kernels (Python vs. Fortran) while maintaining functional equivalence. This approach builds upon the concept of **deterministic self-reflection** (Bhatnagar, 2025).
+The dictionary consists of **44 irreducible primitives** ($\Sigma$). The set of 44 primitives was derived through iterative reduction of symbolic operations observed across the benchmark suite. Each primitive represents an irreducible transformation that cannot be decomposed without introducing additional structural ambiguity. While the present work does not claim minimality in the strict algebraic sense, the set provides a stable operational basis for the evaluated reasoning tasks.
+
+A key architectural feature is the **Wisdom Base (WB)**, a substrate-independent registry that maps abstract primitive IDs to platform-specific implementations (Fig. 2). This registry functions to allow the same universal logical structure (AST) to be instantiated across kernels (Python vs. Fortran) while maintaining functional equivalence. This approach builds upon the concept of **deterministic self-reflection** (Bhatnagar, 2025).
 
 ![Fig. 2](images/fig2_substrate.pdf)
 **Fig. 2: Substrate Independence Layer.** The Wisdom Base functions as a cognitive registry, decoupling the universal logic (AST) from platform-specific execution kernels to ensure implementation invariance.
@@ -66,17 +68,17 @@ The specific transformation of a linear task description into a formal result is
 ---
 
 ## 5. Experimental Evaluation
-The evaluation of MIW consists of 60 deterministic reasoning tasks covering arithmetic transformation, logical inference, structural parsing, and symbolic manipulation. A detailed description of these tasks and the classification criteria is provided in Appendix A. As illustrated in Fig. 5, MIW maintains absolute reliability (100.0% accuracy) across all complexity scales, exhibiting no decay or hallucinations. Within the scope of this study, all tasks were executed across multiple platforms to verify deterministic, bit-identical results, confirming implementation invariance through **term rewriting** systems (Baumgartner et al., 2025).
+The evaluation of MIW consists of 60 deterministic reasoning tasks covering arithmetic transformation, logical inference, structural parsing, and symbolic manipulation. The benchmark suite intentionally includes tasks with varying structural depth and algorithmic properties to stress-test deterministic symbolic composition across diverse domains. A detailed description of these tasks and the classification criteria is provided in Appendix A. As illustrated in Fig. 5, MIW maintains absolute reliability (100.0% accuracy) across all tested complexity scales. Within the scope of this study, all tasks were executed across multiple platforms to verify deterministic, bit-identical results, confirming implementation invariance through **term rewriting** systems (Baumgartner et al., 2025). All benchmark tasks, execution logs, and kernel implementations are publicly available through the Zenodo archive (DOI) and the accompanying source repository. It should be emphasized that the reported 100% accuracy refers strictly to the benchmark tasks defined in this study and should be interpreted as evidence of deterministic compositional correctness within the defined primitive system, rather than a claim of general problem-solving completeness.
 
 ![Fig. 5](images/fig5_reliability.pdf)
-**Fig. 5: Reliability vs. Complexity Contrast.** This plot demonstrates that Morphic's deterministic engine maintains 100% accuracy regardless of task scale (v, d, n), whereas stochastic models (LLMs) typically exhibit decay.
+**Fig. 5: Reliability vs. Complexity Contrast.** While prior studies report performance degradation in deeply nested reasoning tasks for neural models (Liu et al., 2023), MIW maintains absolute reliability (100.0% accuracy) within the evaluated benchmark scope.
 
 ---
 
 ## 6. Discussion
 
 ### 6.1 Language Invariance
-The 100.0% parity achieved across English and Japanese specifications in this study provides strong evidence for a fundamental **decoupling between linguistic form and logical substance** (Fig. 6), highlighting the critical distinction between meaning and understanding in the age of data (Bender & Koller, 2020). In the MIW framework, natural language serves merely as a coordinate system for orienting and triggering logical primitives. This **Language Invariance** suggests that the "geometry of thought" may function as a universal invariant, independent of the specific linguistic shell used for its transmission. Here, **“geometry of thought”** refers to the invariant structure of reasoning represented as a normal-form AST, a concept supported by **logical frameworks** (Harper et al., 1987) and the theory of **Institutions** (Goguen & Burstall, 1992).
+The 100.0% parity achieved across English and Japanese specifications in this study provides strong evidence for a fundamental **decoupling between linguistic form and logical substance** (Fig. 6), highlighting the critical distinction between meaning and understanding in the age of data (Bender & Koller, 2020). In the MIW framework, natural language serves merely as a coordinate system for orienting and triggering logical primitives. This **Language Invariance** suggests that the "geometry of thought" may function as a universal invariant, independent of the specific linguistic shell used for its transmission. In the context of this work, **"geometry of thought" refers specifically to the invariant AST structure obtained after projection into the term algebra space**, representing the irreducible logical essence of an intent. This concept is supported by **logical frameworks** (Harper et al., 1987) and the theory of **Institutions** (Goguen & Burstall, 1992).
 
 ![Fig. 6](images/fig6_manifold.pdf)
 **Fig. 6: Language Invariance Manifold.** This figure illustrates geometric convergence where English and Japanese specifications are projected into the same universal logic form.
@@ -87,10 +89,13 @@ The achievement of **bit-identical parity** between Python and Modern Fortran ke
 ![Fig. 7](images/fig7_manifold.pdf)
 **Fig. 7: Deterministic Kernel Parity.** This visualization shows a single universal logic form processed by independent execution kernels (Python and Fortran), both converging on a bit-identical Normal Form.
 
+### 6.3 Limitations
+The current study focuses on structured symbolic tasks and does not address perceptual grounding or open-domain language understanding. Furthermore, the primitive set remains domain-specific and may require expansion or further generalization for broader reasoning domains. The 100% accuracy reported here is confined to the specific benchmark suite and formal protocol defined in this work.
+
 ---
 
 ## 7. Conclusion
-MIW demonstrates that compositional reasoning can be realized as a deterministic, structure-preserving mapping. Future work will explore hybridization with probabilistic models (Bengio et al., 2020) to bridge structural and perceptual grounding (Harnad, 1990). Furthermore, incorporating **sheaf-theoretic** constructs (Shkursky, 2025) may further generalize MIW into a geometric framework capable of representing overlapping cognitive manifolds (Dhar et al., 2025). This may lead to emergent cognition through architectures like **COGENT3** (Salazar, 2025) and advanced **neuromorphic engineering** (Indiveri & Liu, 2021; Sandamirskaya, 2014).
+MIW demonstrates that compositional reasoning can be realized as a deterministic, structure-preserving mapping. Future work will explore hybridization with probabilistic models (Bengio et al., 2020) to bridge structural and perceptual grounding (Harnad, 1990). Furthermore, future efforts will focus on expanding the benchmark toward larger-scale symbolic reasoning datasets to further validate the scalability of the architecture. Incorporating **sheaf-theoretic** constructs (Shkursky, 2025) may further generalize MIW into a geometric framework capable of representing overlapping cognitive manifolds (Dhar et al., 2025). This may lead to emergent cognition through architectures like **COGENT3** (Salazar, 2025) and advanced **neuromorphic engineering** (Indiveri & Liu, 2021; Sandamirskaya, 2014).
 
 ---
 
@@ -189,14 +194,14 @@ To maintain absolute predictability, MIW employs **Deterministic Error Handling*
 - Goguen, J. A., & Burstall, R. M. (1992). Institutions: Abstract model theory for specification and programming. *Journal of the ACM, 39*(1), 95–146.
 - Gurevich, Y. (1995). Evolving algebras: A tutorial introduction. *Microsoft Research*.
 - Harnad, S. (1990). The symbol grounding problem. *Physica D: Nonlinear Phenomena*, 42, 335–346.
-- Harper, R., Honsell, F., & Plotkin, G. (1987). A framework for defining logics. *Journal of the ACM, 40*(1), 143–184.
+- Harper, R., Honsell, f., & Plotkin, G. (1987). A framework for defining logics. *Journal of the ACM, 40*(1), 143–184.
 - Indiveri, G., & Liu, S.-C. (2021). Introducing 'Neuromorphic Computing and Engineering'. *Neuromorphic Computing and Engineering*, 1(1), 010001.
 - Kotseruba, I., & Tsotsos, J. K. (2020). 40 years of cognitive architectures. *AI Review*, 53(1), 17–94.
 - Lake, B. M., & Baroni, M. (2018). Generalization without systematicity. *Proceedings of ICML*.
 - Landin, P. J. (1964). The mechanical evaluation of expressions. *The Computer Journal*, 6(4), 308–320.
 - Langley, P., et al. (2009). Cognitive architectures: Research issues and challenges. *Cognitive Systems Research, 10*(1), 141–160.
 - Licato, J., et al. (2014). Structural representation and reasoning in a hybrid cognitive architecture. *IJCNN*.
-- Liu, N. F., et al. (2023). Lost in the Middle. *TACL*.
+- Liu, N. f., et al. (2023). Lost in the Middle. *TACL*.
 - Ludwig, J. (2005). Psychologically inspired symbolic cognitive architectures. *University of Oregon Computer Science Reports*.
 - Marcus, G. (2020). The next decade in AI: Four steps towards robust artificial intelligence. *arXiv preprint*.
 - Novello, A., et al. (2025). A neuroscience-inspired dual-process model of compositional generalization. *arXiv preprint*.
