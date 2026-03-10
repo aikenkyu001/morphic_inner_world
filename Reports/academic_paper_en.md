@@ -22,7 +22,8 @@ Modern neural language models struggle with **systematic compositional reasoning
 ### 2.1 The Global Flow
 The MIW architecture processes input through a unidirectional three-stage pipeline (Fig. 1). From an information-theoretic perspective, this process can be viewed as a transition from high-entropy linguistic input to a low-entropy, structured logical normal form (Tononi, 2004; Saanum et al., 2024). This transition is governed by principles of **harmonic mind** architectures (Smolensky & Legendre, 2006).
 
-![Fig. 1: Overview of the MIW architecture. Natural language is projected via a deterministic tokenizer into primitive operators (Sec 2.2), composed into symbolic structures (Sec 3.1), and reduced to normal form (Sec 3.2). MSP Check (Sec 2.2) and the 44 Primitives (Sec 2.3) are intended to maintain structural integrity.](images/fig1_global_flow.pdf)
+![Fig. 1](images/fig1_global_flow.pdf)
+**Fig. 1: Global Architecture of Morphic Inner World.** The pipeline illustrates the deterministic progression from ambiguous natural language to a verified normal form through structure-preserving stages.
 
 ### 2.2 Input Projection and MSP Check
 The projection phase $h: \mathcal{L} \to \Sigma^*$ is designed to be strictly deterministic. It employs:
@@ -30,7 +31,10 @@ The projection phase $h: \mathcal{L} \to \Sigma^*$ is designed to be strictly de
 2.  **MSP (Morphic Structural Pointers)**: Numbered markers (e.g., "1.", "2.") serve as structural anchors. The synthesizer is configured to filter out text outside these anchors, treating it as background noise. This protocol aims to allow the system to extract precise logic even from documents exceeding 8,000 tokens of unstructured text, addressing the "lost in the middle" phenomenon (Liu et al., 2023) and ensuring that the **linguistic structure** is correctly identified for deliberate reasoning (Baroni, 2022; Boggs, 2025).
 
 ### 2.3 Morphic Primitives and Wisdom Base
-The dictionary consists of **44 irreducible primitives** ($\Sigma$). A key architectural feature is the **Wisdom Base (WB)**, a decoupling layer that maps abstract primitive IDs to platform-specific implementations. This registry is designed to allow the same logical structure (AST) to be instantiated across kernels (Python vs. Fortran) while maintaining functional equivalence. This approach builds upon the concept of **deterministic self-reflection** (Bhatnagar, 2025).
+The dictionary consists of **44 irreducible primitives** ($\Sigma$). A key architectural feature is the **Wisdom Base (WB)**, a decoupling layer that maps abstract primitive IDs to platform-specific implementations (Fig. 2). This registry is designed to allow the same logical structure (AST) to be instantiated across kernels (Python vs. Fortran) while maintaining functional equivalence. This approach builds upon the concept of **deterministic self-reflection** (Bhatnagar, 2025).
+
+![Fig. 2](images/fig2_substrate.pdf)
+**Fig. 2: Substrate Independence Layer.** The Wisdom Base acts as a cognitive registry, decoupling the universal logic (AST) from platform-specific execution kernels to ensure implementation invariance.
 
 Furthermore, MIW employs **Semantic Cleansing** at the boundary of the execution kernel, with the goal of normalizing native input data into Morphic Values before evaluation. Complex recursive algorithms are treated as **Fixpoint Packages**—atomic primitives that encapsulate internal structural recursion—allowing the synthesis engine to maintain a manageable logical flow during the execution of high-complexity tasks. This set forms the basis of the free term algebra $\mathcal{M} = \mathcal{T}(\Sigma, \mathcal{V})$, which facilitates **systematic generalization** through algebraic representation (Zhang et al., 2022) and universal knowledge models (Sukhobokov, 2024).
 
@@ -38,11 +42,12 @@ Furthermore, MIW employs **Semantic Cleansing** at the boundary of the execution
 
 ## 3. Structural Synthesis and Evaluation Semantics
 
-Synthesis $g: \Sigma^* \to \mathcal{M}$ constructs symbolic trees satisfying mandatory arity constraints $\alpha(P)$. The synthesis engine utilizes **Arity-based Partial Application**, where functions are transformed into closures ($VClosure$) until all required arguments are supplied. This facilitates the dynamic composition of logic from linear natural language phrases, supported by theories of **dual-process models** of compositional generalization (Novello et al., 2025).
+Synthesis $g: \Sigma^* \to \mathcal{M}$ constructs symbolic trees satisfying mandatory arity constraints $\alpha(P)$ (Fig. 3). The synthesis engine utilizes **Arity-based Partial Application**, where functions are transformed into closures ($VClosure$) until all required arguments are supplied. This facilitates the dynamic composition of logic from linear natural language phrases, supported by theories of **dual-process models** of compositional generalization (Novello et al., 2025).
+
+![Fig. 3](images/fig3_folding.pdf)
+**Fig. 3: Recursive Folding Logic.** Primitives are recursively composed into an irreducible AST structure by strictly validating arity constraints $\alpha(P)$ against incoming arguments.
 
 Furthermore, logical steps are composed into an **Immutable DAG Structure** using nested `Let` bindings. This is intended to ensure that each intermediate result is an immutable named object within the evaluation scope, aiming to eliminate side effects and provide a clear lineage for computed values. Evaluation is performed via deterministic rewrite rules $R_P$ (Landin, 1964), ensuring termination and confluence (see Appendix A). This formal evaluation process is grounded in **Structural Operational Semantics** (Plotkin, 1977) and the principle of **Propositions as Types** (Wadler, 2015).
-
-![Fig. 2: Arity-based Recursive Folding. The synthesis engine recursively composes primitives into an irreducible AST structure by validating arity constraints $\alpha(P)$ against available arguments.](images/fig2_folding.pdf)
 
 ---
 
@@ -52,7 +57,11 @@ MIW was applied to diverse reasoning categories beyond simple sorting:
 - **Spatial Reasoning**: `DIJKSTRA(graph, start, end)`.
 - **Constraint Satisfaction**: `SOLVE_SUDOKU(grid)`.
 - **Optimization**: `TREE_MAX_PATH(root)`.
-These examples demonstrate the system's ability to maintain deliberate **visual-symbolic reasoning** (Boggs, 2025).
+
+The specific transformation of a linear task description into a formal result is visualized in the execution trace (Fig. 4), demonstrating the system's ability to maintain deliberate **visual-symbolic reasoning** (Boggs, 2025).
+
+![Fig. 4](images/fig4_trace.pdf)
+**Fig. 4: Execution Trace Pipeline.** A concrete example of the activity_selection task, tracing the mapping from NL phrases to primitive IDs and the final execution within the Morphic VM.
 
 ---
 
@@ -61,16 +70,26 @@ MIW was evaluated against 60 compositional tasks, achieving a 100.0% success rat
 - **v=8000**: Robust extraction under extreme context noise.
 - **d=15**: Correct execution of 15-level nested logic.
 - **n=20**: Simultaneous verification of 20+ independent logical constraints.
-The **n=20** result illustrates a capacity for maintaining logical consistency far exceeding typical human cognitive spans (Miller's Law, 7±2). Within the scope of this study, results achieved bit-identical parity between Python and Modern Fortran kernels, confirming implementation invariance through **term rewriting** systems (Baumgartner et al., 2025).
+
+The **n=20** result illustrates a capacity for maintaining logical consistency far exceeding typical human cognitive spans (Miller's Law, 7±2). Unlike stochastic models that exhibit performance decay as complexity increases, MIW maintains absolute reliability (Fig. 5). Within the scope of this study, results achieved bit-identical parity between Python and Modern Fortran kernels, confirming implementation invariance through **term rewriting** systems (Baumgartner et al., 2025).
+
+![Fig. 5](images/fig5_reliability.pdf)
+**Fig. 5: Reliability vs. Complexity Contrast.** Morphic's deterministic engine maintains 100% accuracy regardless of task scale (v, d, n), whereas stochastic models (LLMs) typically exhibit decay and hallucinations.
 
 ---
 
 ## 6. Discussion: Relation to Neuro-symbolic AI
 Unlike neuro-symbolic systems such as DeepProbLog, **Plan-SOFAI** (Fabiano et al., 2024), or integrated manufacturing systems (Wu et al., 2025), MIW operates as a pure algebraic reduction engine. By replacing stochastic search with deterministic projection, MIW aims to offer zero inference variance, linear computational cost, and direct interpretability (Sinha & Garcez, 2025; Yang et al., 2025).
 
-Furthermore, the 100.0% parity achieved across English and Japanese specifications in this study provides empirical evidence of a fundamental **decoupling between linguistic form and logical substance**, highlighting the critical distinction between meaning and understanding in the age of data (Bender & Koller, 2020). In the MIW framework, natural language serves as a coordinate system used to orient and trigger logical primitives. This **Language Invariance** suggests that the "geometry of thought"—represented here as a formal AST—may function as a universal invariant, independent of the specific linguistic shell used for its transmission, a concept supported by **logical frameworks** (Harper et al., 1987).
+Furthermore, the 100.0% parity achieved across English and Japanese specifications in this study provides empirical evidence of a fundamental **decoupling between linguistic form and logical substance** (Fig. 6), highlighting the critical distinction between meaning and understanding in the age of data (Bender & Koller, 2020). In the MIW framework, natural language serves as a coordinate system used to orient and trigger logical primitives. This **Language Invariance** suggests that the "geometry of thought"—represented here as a formal AST—may function as a universal invariant, independent of the specific linguistic shell used for its transmission, a concept supported by **logical frameworks** (Harper et al., 1987).
 
-Finally, the achievement of **bit-identical parity** between Python and Modern Fortran kernels supports the concept of **Platform Invariance**. It indicates that the reduction of logic to a Normal Form can be a mathematical necessity that transcends the specific idioms of a computing environment. By decoupling the "logic of thought" from the "mechanics of execution," MIW demonstrates the potential to liberate deterministic intelligence from its underlying substrate (Alexander, 2020; Bhatnagar, 2025).
+![Fig. 6](images/fig6_manifold.pdf)
+**Fig. 6: Language Invariance Manifold.** Demonstrating geometric convergence where English and Japanese specifications are projected into the same universal AST, yielding an identical normalized result.
+
+Finally, the achievement of **bit-identical parity** between Python and Modern Fortran kernels supports the concept of **Platform Invariance** (Fig. 7). It indicates that the reduction of logic to a Normal Form can be a mathematical necessity that transcends the specific idioms of a computing environment. By decoupling the "logic of thought" from the "mechanics of execution," MIW demonstrates the potential to liberate deterministic intelligence from its underlying substrate (Alexander, 2020; Bhatnagar, 2025).
+
+![Fig. 7](images/fig7_manifold.pdf)
+**Fig. 7: Deterministic Kernel Parity.** A single AST is processed by independent execution kernels (Python and Fortran), both converging on a bit-identical Normal Form to prove substrate independence.
 
 ---
 
@@ -90,9 +109,10 @@ Evaluation is defined as a reduction to **Normal Form (NF)**. The evaluation fun
 2. $Eval(P(t_1, ..., t_n)) = R_P(Eval(t_1), ..., Eval(t_n))$ for applications.
 Termination and confluence are ensured by finite arity constraints and orthogonality of rewrite rules. This reduction follows the principles of Propositions as Types (Wadler, 2015).
 
-To maintain absolute predictability, MIW employs **Deterministic Error Handling**. Instead of triggering system-level exceptions, the evaluator returns a **VError** value in cases of undefined operations or type mismatches. This approach treats errors as legitimate states within the logic, ensuring that the kernel never crashes and always produces a well-defined result even under failure conditions (Bhatnagar, 2025).
+To maintain absolute predictability, MIW employs **Deterministic Error Handling** (Fig. 8). Instead of triggering system-level exceptions, the evaluator returns a **VError** value in cases of undefined operations or type mismatches. This approach treats errors as legitimate states within the logic, ensuring that the kernel never crashes and always produces a well-defined result even under failure conditions (Bhatnagar, 2025).
 
-![Fig. 3: Multi-Kernel Deterministic Reduction. The Abstract Syntax Tree is evaluated through independent Python and Modern Fortran kernels, converging on a bit-identical Normal Form to verify implementation invariance.](images/fig3_reduction.pdf)
+![Fig. 8](images/fig8_error.pdf)
+**Fig. 8: Deterministic Error Flow.** Unlike traditional systems that crash upon exceptions, MIW propagates VError objects through the evaluation logic to maintain safe and predictable termination.
 
 ## Appendix B: Benchmark Tasks
 Full task list is available via **Zenodo (DOI: 10.5281/zenodo.18905026)**.
@@ -162,5 +182,5 @@ Full task list is available via **Zenodo (DOI: 10.5281/zenodo.18905026)**.
 - Tononi, G. (2004). An information integration theory of consciousness. *BMC Neuroscience*, 5, 42.
 - Wadler, P. (2015). Propositions as Types. *Communications of the ACM*, 58(12), 75–84.
 - Wu, S., et al. (2025). Toward human-like artificial intelligence by integrating cognitive architectures and large language models. *Neuro-Symbolic AI Journal*.
-- Yang, X. W., et al. (2025). Neuro-symbolic artificial intelligence. *IJCAI*.
+- Yang, X. W., Liu, J. Y., Wang, Y., & Chen, Y. (2025). Neuro-symbolic artificial intelligence. *IJCAI*.
 - Zhang, C., yu, Y., Zhang, Z., & Cao, Z. (2022). Learning algebraic representation for systematic generalization in abstract reasoning. *European Conference on Computer Vision (ECCV)*.

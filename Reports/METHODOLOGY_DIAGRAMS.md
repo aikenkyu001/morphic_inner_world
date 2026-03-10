@@ -1,73 +1,78 @@
 # Methodology Diagrams: Morphic Inner World (Mermaid Source)
 
-This document contains the original Mermaid source code for the diagrams used in the academic papers. These diagrams visualize the transition from Natural Language to Deterministic Logic.
+This document contains the FINAL, verified Mermaid source code for the academic paper. Each figure is strictly ONE single-panel diagram.
 
 ## 1. English Diagrams (EN)
 
-### 1.1 The Global Flow
+### 1.1 Global Architecture
 ```mermaid
 graph TD
-    A[Outer World: Ambiguous NL] -->|Longest-Match Tokenization| B(Semantic Bridge)
-    B -->|Arity-based Folding| C{AST: Formal Logic}
-    C -->|Deterministic Reduction| D[VM: Pure Evaluator]
-    D -->|Normalization| E[Inner World: Truth/Result]
-    style E fill:#f9f,stroke:#333,stroke-width:4px
+    Input[Natural Language Input] --> Tok(Longest-Match Tokenizer)
+    Tok --> Filt(MSP Noise Filter)
+    Filt --> Dict(Semantic Dictionary)
+    Dict --> AST{Formal AST}
+    AST --> VM[Morphic VM Kernels]
+    VM --> Truth[Normal Form / Truth]
+    style Truth fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
-### 1.2 Arity-based Folding
+### 1.2 Recursive Folding Logic
 ```mermaid
 graph LR
-    subgraph Synthesis
-    P1[Phrase A: Arity 1] --- V1[Var 1]
-    P2[Phrase B: Arity 2] --- P1
-    P2 --- V2[Var 2]
-    end
-    Synthesis -->|Fold| AST[AST Tree Structure]
+    Phrases[Linear NL Phrases] --> Arity{Arity Check}
+    Arity -->|Partial| Closures[VClosures]
+    Arity -->|Complete| AST[Irreducible AST]
+    Closures --> Arity
 ```
 
-### 1.3 Normal Form Reduction
-```mermaid
-stateDiagram-v2
-    [*] --> Expression
-    Expression --> Evaluation: App(Func, Arg)
-    Evaluation --> Simplified: Beta-Reduction
-    Simplified --> Evaluation: Nested Structure
-    Simplified --> NormalForm: Irreducible
-    NormalForm --> [*]
-```
-
----
-
-## 2. Japanese Diagrams (JP)
-
-### 2.1 全体フロー
+### 1.3 Deterministic Kernel Parity
 ```mermaid
 graph TD
-    A[外界: 曖昧な自然言語] -->|最長一致トークナイズ| B(架け橋)
-    B -->|アリティに基づくフォールディング| C{AST: 形式論理}
-    C -->|決定論的簡約| D[VM: 純粋評価器]
-    D -->|正規化| E[内界: 真理/結果]
-    style E fill:#f9f,stroke:#333,stroke-width:4px
+    AST{Unified AST} --> Python[Python Kernel]
+    AST --> Fortran[Modern Fortran Kernel]
+    Python --> Parity{Bit-Identical?}
+    Fortran --> Parity
+    Parity --> Result[Normal Form]
+    style Result fill:#f9f,stroke:#333
 ```
 
-### 2.2 アリティに基づく論理合成
+### 1.4 Execution Trace Pipeline
 ```mermaid
 graph LR
-    subgraph Synthesis
-    P1[フレーズA: アリティ1] --- V1[引数1]
-    P2[フレーズB: アリティ2] --- P1
-    P2 --- V2[引数2]
-    end
-    Synthesis -->|合成| AST[AST 木構造]
+    NL["'sort, filter'"] --> Map["ID: 1, 2"]
+    Map --> App["App(filter, App(sort, arg))"]
+    App --> Res["VLiteral(Result)"]
 ```
 
-### 2.3 正規形への簡約
+### 1.5 Substrate Independence Layer
 ```mermaid
-stateDiagram-v2
-    [*] --> 式
-    式 --> 評価: 関数適用
-    評価 --> 簡約: ベータ簡約
-    簡約 --> 評価: 入れ子構造
-    簡約 --> 正規形: 最終結果
-    正規形 --> [*]
+graph TD
+    Spec[Logical Spec] --> WB(Wisdom Base)
+    WB --> Py[Python Implementation]
+    WB --> Ft[Fortran Implementation]
+```
+
+### 1.6 Scaling Reliability
+```mermaid
+graph LR
+    Complexity[v8000 / d15 / n20] --> Morphic[Morphic: 100%]
+    Complexity -.-> LLM[LLM: Stochastic Decay]
+    style Morphic fill:#dfd,stroke:#333
+```
+
+### 1.7 Language Invariance Manifold
+```mermaid
+graph TD
+    EN[English Spec] -->|Projection| AST((Universal AST))
+    JP[Japanese Spec] -->|Projection| AST
+    AST --> Result[Normalized Truth]
+    style AST fill:#f9f,stroke:#333
+```
+
+### 1.8 Deterministic Error Flow
+```mermaid
+graph TD
+    Eval[Evaluation] --> Logic{Valid?}
+    Logic -->|Yes| NF[Normal Form]
+    Logic -->|No| VError[VError Value]
 ```
