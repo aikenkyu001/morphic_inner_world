@@ -223,4 +223,5 @@ Implementations/fortran/*
 
 .DS_Store
 References/papers/*.pdf
+References/papers/*.txt
 Reports/BENCHMARK_RESULTS_LOG.json
