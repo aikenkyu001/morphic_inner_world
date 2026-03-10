@@ -2,7 +2,7 @@
 
 This document provides the verified evidence base for the "Deterministic Intelligence" framework. All academic papers listed here have been physically acquired (PDF) and are part of the project repository.
 
-## Confirmed Academic References (37 PDFs Available)
+## Confirmed Academic References (39 PDFs Available)
 
 **Abadi, M., & Plotkin, G. (2020).** A simple differentiable programming language. *arXiv preprint*.
 - File: `References/papers/Abadi_2020_Differentiable.pdf`
@@ -12,6 +12,9 @@ This document provides the verified evidence base for the "Deterministic Intelli
 
 **Anderson, J. R., Bothell, D., Byrne, M. D., Douglass, S., Lebiere, C., & Qin, Y. (2004).** An integrated theory of the mind. *Psychological Review*, 111, 1036–1060.
 - File: `References/papers/Anderson_et_al_2004.pdf`
+
+**Baader, F., & Nipkow, T. (1998).** *Term Rewriting and All That*. Cambridge University Press.
+- File: `References/papers/Term_Rewriting_and_All_That.pdf`
 
 **Baroni, M. (2022).** On the proper role of linguistically-oriented deep net analysis in linguistic theorizing. *arXiv preprint*.
 - File: `References/papers/Baroni_2022_Linguistic.pdf`
@@ -37,8 +40,11 @@ This document provides the verified evidence base for the "Deterministic Intelli
 **Dhar, R., et al. (2025).** Toward a sheaf-theoretic understanding of compositionality in large language models. *OpenReview*.
 - File: `References/papers/Dhar_2025_Sheaf.pdf`
 
-**Fabiano, F., et al. (2024).** Plan-SOFAI: A neuro-symbolic planning architecture. *OpenReview*.
+**Fabiano, f., et al. (2024).** Plan-SOFAI: A neuro-symbolic planning architecture. *OpenReview*.
 - File: `References/papers/Fabiano_et_al_2024.pdf`
+
+**Goguen, J. A., & Burstall, R. M. (1992).** Institutions: Abstract model theory for specification and programming. *Journal of the ACM, 39*(1), 95–146.
+- File: `References/papers/Institutions_Abstract_Model_Theory.pdf`
 
 **Gurevich, Y. (1995).** Evolving algebras: A tutorial introduction. *Microsoft Research*.
 - File: `References/papers/Gurevich_1995_Algebras.pdf`
@@ -67,7 +73,7 @@ This document provides the verified evidence base for the "Deterministic Intelli
 **Licato, J., Sun, R., & Bringsjord, S. (2014).** Structural representation and reasoning in a hybrid cognitive architecture. *International Joint Conference on Neural Networks (IJCNN)*.
 - File: `References/papers/Licato_et_al_2014.pdf`
 
-**Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., & Liang, P. (2023).** Lost in the Middle: How Language Models Use Long Contexts. *Transactions of the Association for Computational Linguistics (TACL)*.
+**Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, f., & Liang, P. (2023).** Lost in the Middle: How Language Models Use Long Contexts. *Transactions of the Association for Computational Linguistics (TACL)*.
 - File: `References/papers/Liu_et_al_2023.pdf`
 
 **Ludwig, J. (2005).** Psychologically inspired symbolic cognitive architectures. *University of Oregon Computer Science Reports*.
@@ -117,7 +123,7 @@ This document provides the verified evidence base for the "Deterministic Intelli
 
 ---
 
-## 🛡️ Appendix: Evidence Integrity & Verification Report (37/37)
+## 🛡️ Appendix: Evidence Integrity & Verification Report (39/39)
 
 The following table provides definitive proof of existence for each reference cited in the Morphic Inner World framework. Every entry has been verified by the AI agent through automated text extraction (`pdftotext`) from the physical PDF files located in `References/papers/`.
 
@@ -126,40 +132,42 @@ The following table provides definitive proof of existence for each reference ci
 | 1 | Abadi & Plotkin (2020) | A Simple Diﬀerentiable Programming Language | ✅ Verified |
 | 2 | Alexander (2020) | Deterministic Artiﬁcial Intelligence | ✅ Verified |
 | 3 | Anderson et al. (2004) | An Integrated Theory of the Mind | ✅ Verified |
-| 4 | Baroni (2022) | On the proper role of linguistically-oriented deep net analysis... | ✅ Verified |
-| 5 | Baumgartner et al. (2025) | The AlphaPhysics Term Rewriting System for Marking Algebraic... | ✅ Verified |
-| 6 | Bender & Koller (2020) | Climbing towards NLU: On Meaning, Form, and Understanding... | ✅ Verified |
-| 7 | Bengio et al. (2020) | Thinking Fast and Slow in AI | ✅ Verified |
-| 8 | Bhatnagar (2025) | The RAM Cognitive Architecture: A Deterministic, Self-Reﬂective... | ✅ Verified |
-| 9 | Boggs (2025) | Deliberate Visual-Symbolic Reasoning in a Cognitive Architecture | ✅ Verified |
-| 10 | Church (1932) | A Set of Postulates for the Foundation of Logic | ✅ Verified |
-| 11 | Dhar et al. (2025) | T OWARD A S HEAF -T HEORETIC U NDERSTANDING OF C OMPOSITIONALITY... | ✅ Verified |
-| 12 | Fabiano et al. (2024) | Plan-SOFAI: A Neuro-Symbolic Planning Architecture | ✅ Verified |
-| 13 | Gurevich (1995) | Equivalence Is In The Eye Of The Beholder (Evolving Algebras) | ✅ Verified |
-| 14 | Harnad (1990) | THE SYMBOL GROUNDING P R O B L E M | ✅ Verified |
-| 15 | Harper et al. (1987) | A Framework for Defining Logics | ✅ Verified |
-| 16 | Indiveri & Liu (2021) | Introducing “Neuromorphic Computing and Engineering” | ✅ Verified |
-| 17 | Kotseruba & Tsotsos (2020) | A Review of 40 Years in Cognitive Architecture Research | ✅ Verified |
-| 18 | Lake & Baroni (2018) | Generalization without Systematicity | ✅ Verified |
-| 19 | Landin (1964) | The mechanical evaluation of expressions | ✅ Verified |
-| 20 | Langley et al. (2009) | Cognitive architectures: Research issues and challenges | ✅ Verified |
-| 21 | Licato et al. (2014) | Structural Representation and Reasoning in a Hybrid Cognitive... | ✅ Verified |
-| 22 | Liu et al. (2023) | Lost in the Middle: How Language Models Use Long Contexts | ✅ Verified |
-| 23 | Ludwig (2005) | Psychologically Inspired Symbolic Cognitive Architectures | ✅ Verified |
-| 24 | Marcus (2020) | The Next Decade in AI: Four Steps Towards Robust... | ✅ Verified |
-| 25 | Novello et al. (2025) | A Neuroscience-Inspired Dual-Process Model of Compositional... | ✅ Verified |
-| 26 | Plotkin (1977) | A Structural Approach to Operational Semantics | ✅ Verified |
-| 27 | Saanum et al. (2024) | Simplifying Latent Dynamics with Softly State-Invariant World... | ✅ Verified |
-| 28 | Salazar (2025) | Introducing COGENT3: An AI Architecture for Emergent Cognition | ✅ Verified |
-| 29 | Sandamirskaya (2014) | Dynamic neural ﬁelds as a step toward cognitive neuromorphic... | ✅ Verified |
-| 30 | Shkursky (2025) | The Distinction Field: A Uniﬁed Architecture of Cognition... | ✅ Verified |
-| 31 | Sinha & Garcez (2025) | Neuro-Symbolic Frameworks: Conceptual Characterization... | ✅ Verified |
-| 32 | Sukhobokov (2024) | A Universal Knowledge Model and Cognitive Architecture... | ✅ Verified |
-| 33 | Tononi (2004) | An information integration theory of consciousness | ✅ Verified |
-| 34 | Wadler (2015) | Propositions as Types | ✅ Verified |
-| 35 | Wu et al. (2025) | Cognitive LLMs: Toward Human-Like Artiﬁcial Intelligence... | ✅ Verified |
-| 36 | Yang et al. (2025) | Neuro-Symbolic Artiﬁcial Intelligence: Towards Improving... | ✅ Verified |
-| 37 | Zhang et al. (2022) | Learning Algebraic Representation for Systematic Generalization... | ✅ Verified |
+| 4 | Baader & Nipkow (1998) | Term Rewriting and All That | ✅ Verified |
+| 5 | Baroni (2022) | On the proper role of linguistically-oriented deep net analysis... | ✅ Verified |
+| 6 | Baumgartner et al. (2025) | The AlphaPhysics Term Rewriting System for Marking Algebraic... | ✅ Verified |
+| 7 | Bender & Koller (2020) | Climbing towards NLU: On Meaning, Form, and Understanding... | ✅ Verified |
+| 8 | Bengio et al. (2020) | Thinking Fast and Slow in AI | ✅ Verified |
+| 9 | Bhatnagar (2025) | The RAM Cognitive Architecture: A Deterministic, Self-Reﬂective... | ✅ Verified |
+| 10 | Boggs (2025) | Deliberate Visual-Symbolic Reasoning in a Cognitive Architecture | ✅ Verified |
+| 11 | Church (1932) | A Set of Postulates for the Foundation of Logic | ✅ Verified |
+| 12 | Dhar et al. (2025) | T OWARD A S HEAF -T HEORETIC U NDERSTANDING OF C OMPOSITIONALITY... | ✅ Verified |
+| 13 | Fabiano et al. (2024) | Plan-SOFAI: A Neuro-Symbolic Planning Architecture | ✅ Verified |
+| 14 | Goguen & Burstall (1992) | Institutions: Abstract Model Theory for Specification and Programming | ✅ Verified |
+| 15 | Gurevich (1995) | Equivalence Is In The Eye Of The Beholder (Evolving Algebras) | ✅ Verified |
+| 16 | Harnad (1990) | THE SYMBOL GROUNDING P R O B L E M | ✅ Verified |
+| 17 | Harper et al. (1987) | A Framework for Defining Logics | ✅ Verified |
+| 18 | Indiveri & Liu (2021) | Introducing “Neuromorphic Computing and Engineering” | ✅ Verified |
+| 19 | Kotseruba & Tsotsos (2020) | A Review of 40 Years in Cognitive Architecture Research | ✅ Verified |
+| 20 | Lake & Baroni (2018) | Generalization without Systematicity | ✅ Verified |
+| 21 | Landin (1964) | The mechanical evaluation of expressions | ✅ Verified |
+| 22 | Langley et al. (2009) | Cognitive architectures: Research issues and challenges | ✅ Verified |
+| 23 | Licato et al. (2014) | Structural Representation and Reasoning in a Hybrid Cognitive... | ✅ Verified |
+| 24 | Liu et al. (2023) | Lost in the Middle: How Language Models Use Long Contexts | ✅ Verified |
+| 25 | Ludwig (2005) | Psychologically inspired symbolic cognitive architectures | ✅ Verified |
+| 26 | Marcus (2020) | The Next Decade in AI: Four Steps Towards Robust... | ✅ Verified |
+| 27 | Novello et al. (2025) | A Neuroscience-Inspired Dual-Process Model of Compositional... | ✅ Verified |
+| 28 | Plotkin (1977) | A Structural Approach to Operational Semantics | ✅ Verified |
+| 29 | Saanum et al. (2024) | Simplifying latent dynamics with softly state-invariant world... | ✅ Verified |
+| 30 | Salazar (2025) | Introducing COGENT3: An AI Architecture for Emergent Cognition | ✅ Verified |
+| 31 | Sandamirskaya (2014) | Dynamic neural ﬁelds as a step toward cognitive neuromorphic... | ✅ Verified |
+| 32 | Shkursky (2025) | The Distinction Field: A Uniﬁed Architecture of Cognition... | ✅ Verified |
+| 33 | Sinha & Garcez (2025) | Neuro-Symbolic Frameworks: Conceptual Characterization... | ✅ Verified |
+| 34 | Sukhobokov (2024) | A Universal Knowledge Model and Cognitive Architecture... | ✅ Verified |
+| 35 | Tononi (2004) | An information integration theory of consciousness | ✅ Verified |
+| 36 | Wadler (2015) | Propositions as Types | ✅ Verified |
+| 37 | Wu et al. (2025) | Cognitive LLMs: Toward Human-Like Artiﬁcial Intelligence... | ✅ Verified |
+| 38 | Yang et al. (2025) | Neuro-Symbolic Artiﬁcial Intelligence: Towards Improving... | ✅ Verified |
+| 39 | Zhang et al. (2022) | Learning Algebraic Representation for Systematic Generalization... | ✅ Verified |
 
 ---
 
